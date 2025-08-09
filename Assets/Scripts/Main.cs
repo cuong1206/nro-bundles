@@ -256,7 +256,6 @@ public class Main : MonoBehaviour
         }
         return Hex2String(tenSauChinhSua);
     }
-
     public static string Hex2String(string A_0)
     {
         object A_1 = 0;

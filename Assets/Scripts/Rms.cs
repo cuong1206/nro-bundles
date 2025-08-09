@@ -93,7 +93,7 @@ public class Rms
 	{
 		if (status != 0)
 		{
-			Res.err("Cannot save RMS " + filename + " because current is saving " + Rms.filename);
+			Debug.LogError("Cannot save RMS " + filename + " because current is saving " + Rms.filename);
 			return;
 		}
 		Rms.filename = filename;
@@ -110,7 +110,7 @@ public class Rms
 		}
 		if (i == 500)
 		{
-			Res.err("TOO LONG TO SAVE RMS " + filename);
+			Debug.LogError("TOO LONG TO SAVE RMS " + filename);
 		}
 	}
 
@@ -118,7 +118,7 @@ public class Rms
 	{
 		if (status != 0)
 		{
-			Res.err("Cannot load RMS " + filename + " because current is loading " + Rms.filename);
+			Debug.LogError("Cannot load RMS " + filename + " because current is loading " + Rms.filename);
 			return null;
 		}
 		Rms.filename = filename;
@@ -135,7 +135,7 @@ public class Rms
 		}
 		if (i == 500)
 		{
-			Res.err("TOO LONG TO LOAD RMS " + filename);
+			Debug.LogError("TOO LONG TO LOAD RMS " + filename);
 		}
 		return data;
 	}

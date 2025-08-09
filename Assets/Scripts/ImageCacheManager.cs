@@ -29,12 +29,12 @@ public class ImageCacheManager
             }
             else
             {
-                Res.err($"❌ Không thể nạp {assetPath} để lưu.");
+                Debug.LogError($"❌ Không thể nạp {assetPath} để lưu.");
             }
         }
         catch (Exception ex)
         {
-            Res.err($"❌ Lỗi lưu ảnh {assetPath}: {ex.Message}");
+            Debug.LogError($"❌ Lỗi lưu ảnh {assetPath}: {ex.Message}");
         }
     }
 
@@ -55,7 +55,7 @@ public class ImageCacheManager
             }
             UnityEngine.Object.Destroy(texture);
         }
-        Res.err($"❌ Không tìm thấy file {fullPath}");
+        Debug.LogError($"❌ Không tìm thấy file {fullPath}");
         return null;
     }
 

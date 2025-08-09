@@ -25,9 +25,9 @@ public class ServerListScreen : mScreen, IActionListener
 
     public static sbyte[] language;
 
-    public Command[] cmd;
+    private Command[] cmd;
 
-    public int nCmdPlay;
+    private int nCmdPlay;
 
     public static string keyDecryptString;
 

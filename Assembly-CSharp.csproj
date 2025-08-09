@@ -9,8 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{3912112A-A38E-EBEF-C1B8-2F39868F855F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -62,7 +61,6 @@
     <Analyzer Include="E:\2023.2.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Mod\VietnameseInput.cs" />
     <Compile Include="Assets\Scripts\Session_ME.cs" />
     <Compile Include="Assets\Scripts\Mod\XMAP\GroupMap.cs" />
     <Compile Include="Assets\Scripts\TransportScr.cs" />
@@ -71,14 +69,12 @@
     <Compile Include="Assets\Scripts\Sprite.cs" />
     <Compile Include="Assets\Scripts\SkillOptionTemplate.cs" />
     <Compile Include="Assets\Scripts\DataOutputStream.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\GraphicsReducer.cs" />
     <Compile Include="Assets\Scripts\InfoPhuBan.cs" />
     <Compile Include="Assets\Scripts\Effect2.cs" />
     <Compile Include="Assets\Scripts\ArrayCast.cs" />
     <Compile Include="Assets\Scripts\Mod\XMAP\ManualXmap.cs" />
     <Compile Include="Assets\Scripts\iPhoneGeneration.cs" />
     <Compile Include="Assets\Scripts\KeyConstant.cs" />
-    <Compile Include="Assets\Scripts\Mod\LocalizedString.cs" />
     <Compile Include="Assets\Scripts\mGraphics.cs" />
     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Compile Include="Assets\Scripts\BigBoss2.cs" />
@@ -91,25 +87,18 @@
     <Compile Include="Assets\Scripts\SmallImage.cs" />
     <Compile Include="Assets\Scripts\T1.cs" />
     <Compile Include="Assets\Scripts\QueenBee\ZoneUI.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\ServerConverter.cs" />
     <Compile Include="Assets\Scripts\Mod\Background\IBackground.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\CharacterInfo.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\ComboBox.cs" />
     <Compile Include="Assets\Scripts\SplashScr.cs" />
     <Compile Include="Assets\Scripts\EffectInfoPaint.cs" />
     <Compile Include="Assets\Scripts\MotherCanvas.cs" />
     <Compile Include="Assets\Scripts\ActionChat.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\UIImage.cs" />
-    <Compile Include="Assets\Scripts\Mod\ListBoss.cs" />
     <Compile Include="Assets\Scripts\MyAudioClip.cs" />
     <Compile Include="Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\Scripts\mFont.cs" />
     <Compile Include="Assets\Scripts\Paint.cs" />
     <Compile Include="Assets\Scripts\BackgroudEffect.cs" />
     <Compile Include="Assets\Scripts\Cout.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\Anchor.cs" />
     <Compile Include="Assets\Scripts\Session_ME2.cs" />
-    <Compile Include="Assets\Scripts\Mod\Utils.cs" />
     <Compile Include="Assets\Scripts\ItemMap.cs" />
     <Compile Include="Assets\Scripts\Assets.src.g\ClientInput.cs" />
     <Compile Include="Assets\Scripts\PreloadManager.cs" />
@@ -143,8 +132,6 @@
     <Compile Include="Assets\Scripts\Skills.cs" />
     <Compile Include="Assets\Scripts\SkillTemplate.cs" />
     <Compile Include="Assets\Scripts\MyVector.cs" />
-    <Compile Include="Assets\Scripts\Mod\Constants\MonsterType.cs" />
-    <Compile Include="Assets\Scripts\Mod\Constants\ItemTemplateType.cs" />
     <Compile Include="Assets\Scripts\Message.cs" />
     <Compile Include="Assets\Scripts\Mod\Background\CustomBackground.cs" />
     <Compile Include="Assets\Scripts\GamePad.cs" />
@@ -160,7 +147,6 @@
     <Compile Include="Assets\Scripts\BgItemMn.cs" />
     <Compile Include="Assets\Scripts\DataInputStream.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\Mod\Constants\CharGender.cs" />
     <Compile Include="Assets\Scripts\EffectCharPaint.cs" />
     <Compile Include="Assets\Scripts\QueenBee\Bag.cs" />
     <Compile Include="Assets\Scripts\FireWorkEff.cs" />
@@ -190,13 +176,12 @@
     <Compile Include="Assets\Scripts\ItemTemplates.cs" />
     <Compile Include="Assets\Scripts\Char.cs" />
     <Compile Include="Assets\Scripts\FireWorkMn.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\MyButton.cs" />
     <Compile Include="Assets\Scripts\NClass.cs" />
     <Compile Include="Assets\Scripts\EPosition.cs" />
     <Compile Include="Assets\Scripts\InputStream.cs" />
     <Compile Include="Assets\Scripts\BackgroundManager.cs" />
+    <Compile Include="Assets\Scripts\Mod\Model\Account.cs" />
     <Compile Include="Assets\Scripts\MobCapcha.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\Server.cs" />
     <Compile Include="Assets\Scripts\MagicTree.cs" />
     <Compile Include="Assets\Scripts\BallInfo.cs" />
     <Compile Include="Assets\Scripts\TouchScreenKeyboard.cs" />
@@ -216,7 +201,6 @@
     <Compile Include="Assets\Scripts\IMessageHandler.cs" />
     <Compile Include="Assets\Scripts\Archivement.cs" />
     <Compile Include="Assets\Scripts\IChatable.cs" />
-    <Compile Include="Assets\Scripts\Mod\GameEvents.cs" />
     <Compile Include="Assets\Scripts\ServerEffect.cs" />
     <Compile Include="Assets\Scripts\GameMidlet.cs" />
     <Compile Include="Assets\Scripts\InputDlg.cs" />
@@ -228,14 +212,10 @@
     <Compile Include="Assets\Scripts\Mod\XMAP\AutoXmap.cs" />
     <Compile Include="Assets\Scripts\Mod\Model\AutoLogin.cs" />
     <Compile Include="Assets\Scripts\Math.cs" />
-    <Compile Include="Assets\Scripts\Mod\Constants\SkillType.cs" />
     <Compile Include="Assets\Scripts\EffectPanel.cs" />
     <Compile Include="Assets\Scripts\ChatPopup.cs" />
     <Compile Include="Assets\Scripts\SmallDart.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\ScrollableMenuItems.cs" />
     <Compile Include="Assets\Scripts\Info_RadaScr.cs" />
-    <Compile Include="Assets\Scripts\Mod\Strings.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\InGameAccountManager.cs" />
     <Compile Include="Assets\Scripts\PopUp.cs" />
     <Compile Include="Assets\Scripts\Mod\Model\RemoteAddress.cs" />
     <Compile Include="Assets\Scripts\ItemOptionTemplate.cs" />
@@ -248,10 +228,8 @@
     <Compile Include="Assets\Scripts\TopInfo.cs" />
     <Compile Include="Assets\Scripts\TaskOrder.cs" />
     <Compile Include="Assets\Scripts\Part.cs" />
-    <Compile Include="Assets\Scripts\Mod\ExtensionMethods.cs" />
     <Compile Include="Assets\Scripts\LoadTextureHelper.cs" />
     <Compile Include="Assets\Scripts\Assets.src.g\RegisterScreen.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\CustomGraphics.cs" />
     <Compile Include="Assets\Scripts\Cmd.cs" />
     <Compile Include="Assets\Scripts\MyKeyMap.cs" />
     <Compile Include="Assets\Scripts\ServerScr.cs" />
@@ -272,7 +250,6 @@
     <Compile Include="Assets\Scripts\MovePoint.cs" />
     <Compile Include="Assets\Scripts\Arrowpaint.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\Account.cs" />
     <Compile Include="Assets\Scripts\EffecMn.cs" />
     <Compile Include="Assets\Scripts\Mod\Background\BackgroundVideo.cs" />
     <Compile Include="Assets\Scripts\SkillOption.cs" />
@@ -288,7 +265,6 @@
     <Compile Include="Assets\Scripts\FrameImage.cs" />
     <Compile Include="Assets\Scripts\Assets.src.e\SmallSave.cs" />
     <Compile Include="Assets\Scripts\EffectData.cs" />
-    <Compile Include="Assets\Scripts\Mod\Graphics\HideGameUI.cs" />
     <Compile Include="Assets\Scripts\Net.cs" />
     <Compile Include="Assets\Scripts\BundleDownloader.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
@@ -299,14 +275,12 @@
     <Compile Include="Assets\Scripts\BachTuoc.cs" />
     <Compile Include="Assets\Scripts\Res.cs" />
     <Compile Include="Assets\Scripts\Mod\Model\CoroutineRunner.cs" />
-    <Compile Include="Assets\Scripts\Mod\ListCharsInMap.cs" />
     <Compile Include="Assets\Scripts\MainImage.cs" />
     <Compile Include="Assets\Scripts\ScaleGUI.cs" />
     <Compile Include="Assets\Scripts\GameCanvas.cs" />
     <Compile Include="Assets\Scripts\Effect_End.cs" />
     <Compile Include="Assets\Scripts\ActionPaint.cs" />
     <Compile Include="Assets\Scripts\ClanMessage.cs" />
-    <Compile Include="Assets\Scripts\Mod\AccountManager\AccountType.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\MsgDlg.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
@@ -315,9 +289,8 @@
     <Compile Include="Assets\Scripts\Line.cs" />
     <Compile Include="Assets\Scripts\ImgByName.cs" />
     <Compile Include="Assets\Scripts\Random.cs" />
-    <Compile Include="Assets\Scripts\Mod\Constants\SkillManaUseType.cs" />
-    <Compile Include="Assets\Scripts\IPaint.cs" />
     <Compile Include="Assets\Scripts\Assets.src.g\BigBoss.cs" />
+    <Compile Include="Assets\Scripts\IPaint.cs" />
     <Compile Include="Assets\Scripts\NinjaUtil.cs" />
     <Compile Include="Assets\Scripts\iPhoneSettings.cs" />
     <Compile Include="Assets\Scripts\SoundMn.cs" />

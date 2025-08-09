@@ -189,7 +189,7 @@ public class Res
 	{
 		if (mSystem.isTest)
 		{
-			Res.err(s);
+			Debug.LogError(s);
 		}
 	}
 

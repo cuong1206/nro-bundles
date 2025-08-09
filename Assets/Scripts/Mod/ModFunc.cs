@@ -1,7 +1,6 @@
 using C_U_O_N_G;
 using JetBrains.Annotations;
 using Mod;
-using Mod.AccountManager;
 using Mod.Background;
 using Mod.XMAP;
 using System;
@@ -199,7 +198,7 @@ public class ModFunc : IActionListener
 
     public static bool isOpenAccMAnager = false;
 
-   // public static List<Account> accounts = new();
+    public static List<Account> accounts = new();
 
     public List<Command> cmdsChooseAcc = new();
 
@@ -383,8 +382,6 @@ public class ModFunc : IActionListener
 
     public void LoadGame()
     {
-        if (!Mod.Utils.IsOpenedByExternalAccountManager)
-            InGameAccountManager.OnStart();
         if (!loadedMusic)
         {
             InitMusic();
@@ -1188,8 +1185,6 @@ public class ModFunc : IActionListener
 
     private void UpdateTouch()
     {
-        ListCharsInMap.updateTouch();
-        ListBoss.UpdateTouch();
         if (GameScr.gI().isNotPaintTouchControl())
         {
             return;
@@ -1267,7 +1262,7 @@ public class ModFunc : IActionListener
 
     public static bool AutoLogin()
     {
-        /*if (autoLogin == null)
+        if (autoLogin == null)
         {
             return false;
         }
@@ -1317,15 +1312,12 @@ public class ModFunc : IActionListener
         }
 
         GameCanvas.loginScr.doLogin();
-        autoLogin.waitToNextLogin = true;*/
+        autoLogin.waitToNextLogin = true;
         return true;
     }
 
     public void Update()
     {
-        GameEvents.OnUpdateGameScr();
-        if (!Mod.Utils.IsOpenedByExternalAccountManager)
-            InGameAccountManager.UpdateSizeAndPos();
         UpdateTouch();
         if (isPeanPetChiso && mSystem.currentTimeMillis() - lastPeanPet >= 3000L)
         {
@@ -1470,8 +1462,7 @@ public class ModFunc : IActionListener
         //    Mod.NeBoss();
         //    Mod.currNeBoss = mSystem.currentTimeMillis();
         //}
-        ListCharsInMap.Update();
-        ListBoss.Update();
+
         UpdateNotifTichXanh();
     }
 
@@ -1680,17 +1671,16 @@ public class ModFunc : IActionListener
         if (notifBoss)
         {
             int numX = 38;
-            /*for (int i = 0; i < bossNotif.size(); i++)
+            for (int i = 0; i < bossNotif.size(); i++)
             {
                 ((ShowBoss)bossNotif.elementAt(i)).PaintBoss(g, GameCanvas.w - 2, numX, mFont.RIGHT);
                 numX += 10;
-            }*/
-            ListBoss.Paint(48, g);
+            }
         }
 
         if (showCharsInMap)
         {
-            /*paintCharInfo(g);
+            paintCharInfo(g);
             int numX = GameCanvas.w - 130;
             int numY = notifBoss ? 92 : 50;
             charsInMap.removeAllElements();
@@ -1720,9 +1710,9 @@ public class ModFunc : IActionListener
                         (i + 1) < 10 ? "0" : "",
                         (i + 1).ToString(),
                         ". " + 
-                         *//* [",
+                         /* [",
                         CharGender(char6),
-                        "] ",*//*
+                        "] ",*/
                         char6.cName,
                         " [ ",
                         NinjaUtil.getMoneys(char6.cHP).ToString(),
@@ -1753,9 +1743,7 @@ public class ModFunc : IActionListener
                     charsInMap.addElement(char6);
                     numY += 10;
                 }
-            }*/
-            int numY = ListBoss.isShow() ? 103 : 65;
-            ListCharsInMap.Paint(numY,g);
+            }
         }
 
         int num4 = 70;
@@ -2080,7 +2068,7 @@ public class ModFunc : IActionListener
             case 101:
                 isOpenAccMAnager = true;
                 break;
-           /* case 102:
+            case 102:
                 Account account = (Account)p;
                 Rms.saveRMSString("acc", account.getUsername());
                 Rms.saveRMSString("pass", account.getPassword());
@@ -2096,7 +2084,7 @@ public class ModFunc : IActionListener
                 cmdsChooseAcc.RemoveAt(index);
                 cmdsDelAcc.RemoveAt(index);
                 SaveAcc();
-                break;*/
+                break;
             case 104:
                 isOpenAccMAnager = false;
                 break;
@@ -2395,7 +2383,7 @@ public class ModFunc : IActionListener
 
     public void LoadAcc()
     {
-        /*string text = Rms.loadRMSString("accManager");
+        string text = Rms.loadRMSString("accManager");
         if (text == null || text.Trim('|') == string.Empty) return;
 
         accounts.Clear();
@@ -2417,12 +2405,12 @@ public class ModFunc : IActionListener
             Command cmdDel = new("Xoá", this, 103, account);
             cmdDel.setTypeDelete();
             cmdsDelAcc.Add(cmdDel);
-        }*/
+        }
     }
 
     public void AddAccount(string user, string pass)
     {
-        /*Account account = new(user, pass);
+        Account account = new(user, pass);
 
         int index = accounts.IndexOf(account);
         if (index != -1)
@@ -2435,18 +2423,18 @@ public class ModFunc : IActionListener
         {
             accounts.RemoveAt(i);
         }
-        SaveAcc();*/
+        SaveAcc();
     }
 
     private void SaveAcc()
     {
-       /* string text = "";
+        string text = "";
         foreach (Account acc in accounts)
         {
             text += string.Join('$', acc.getUsername(), acc.getPassword());
             text += "|";
         }
-        Rms.saveRMSString("accManager", text.Trim('|'));*/
+        Rms.saveRMSString("accManager", text.Trim('|'));
     }
 
     //private static Account FindAccWithUsername(string username)
@@ -2732,13 +2720,13 @@ public class ModFunc : IActionListener
 
     public static void LoadLogoImages()
     {
-        if (GameCanvas.ispaintLogoGif)
+        /*if (GameCanvas.ispaintLogoGif)
         {
             for (int i = 0; i < 60; i++)
             {
                 logos[i] = GameCanvas.LoadImageFromRoot("/logo/frame_" + (i < 10 ? "0" + i : i) + "_delay-0.03s.png");
             }
-        }
+        }*/
         for (int i = 0; i < 4; i++)
         {
             babyshark[i] = GameCanvas.loadImage("/Bag/babyshark/frame" + i + ".png");
@@ -2799,7 +2787,7 @@ public class ModFunc : IActionListener
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Res.err(www.error);
+            Debug.LogError(www.error);
         }
         else
         {

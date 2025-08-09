@@ -8379,6 +8379,7 @@ public class Char : IMapObject
         }
         count_NEW++;
     }
+
     public Char clone()
     {
         Char @char = new Char();

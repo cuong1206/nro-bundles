@@ -407,7 +407,7 @@ public class Sound
         AudioClip clip = LoadAssetHelper.Load<AudioClip>(filename);
         if (clip == null)
         {
-            Res.err($"❌ Không tìm thấy âm thanh tại đường dẫn: {filename}");
+            Debug.LogError($"❌ Không tìm thấy âm thanh tại đường dẫn: {filename}");
             return;
         }
 
@@ -485,7 +485,7 @@ public class Sound
     {
         if (status != 0)
         {
-            Res.err("CANNOT STOP AUDIO WHEN STOPPING");
+            Debug.LogError("CANNOT STOP AUDIO WHEN STOPPING");
             return;
         }
         postem = pos;
@@ -501,7 +501,7 @@ public class Sound
         }
         if (i == 100)
         {
-            Res.err("TOO LONG FOR STOP AUDIO");
+            Debug.LogError("TOO LONG FOR STOP AUDIO");
         }
         else
         {

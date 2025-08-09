@@ -56,7 +56,7 @@ namespace Game1
         {
             if (asset == null)
             {
-                Res.err("❌ TextAsset null khi gọi readDataFromAsset");
+                Debug.LogError("❌ TextAsset null khi gọi readDataFromAsset");
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace Game1
             }
             catch (System.Exception ex)
             {
-                Res.err("❌ Lỗi đọc readDataFromAsset: " + ex.Message);
+                Debug.LogError("❌ Lỗi đọc readDataFromAsset: " + ex.Message);
             }
         }
 
@@ -75,7 +75,7 @@ namespace Game1
         {
             if (asset == null)
             {
-                Res.err("❌ TextAsset null khi gọi readData2FromAsset");
+                Debug.LogError("❌ TextAsset null khi gọi readData2FromAsset");
                 return;
             }
 
@@ -86,7 +86,7 @@ namespace Game1
             }
             catch (System.Exception ex)
             {
-                Res.err("❌ Lỗi đọc readData2FromAsset: " + ex.Message);
+                Debug.LogError("❌ Lỗi đọc readData2FromAsset: " + ex.Message);
             }
         }
         public void readData(string patch)

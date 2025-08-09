@@ -142,7 +142,7 @@ namespace Assets.src.g
                 }
                 catch (System.Exception ex)
                 {
-                    Res.err($"❌ Lỗi load effect {id}: {ex.Message}");
+                    Debug.LogError($"❌ Lỗi load effect {id}: {ex.Message}");
                 }
             }
             else
@@ -168,7 +168,7 @@ namespace Assets.src.g
                 }
                 catch (System.Exception ex)
                 {
-                    Res.err($"❌ Lỗi load effect {id}: {ex.Message}");
+                    Debug.LogError($"❌ Lỗi load effect {id}: {ex.Message}");
                 }
             }
             else

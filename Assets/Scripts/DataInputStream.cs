@@ -64,7 +64,7 @@ public class DataInputStream
 			}
 			if (status != 0)
 			{
-				Res.err("CANNOT GET INPUTSTREAM " + filename + " WHEN GETTING " + filenametemp);
+				Debug.LogError("CANNOT GET INPUTSTREAM " + filename + " WHEN GETTING " + filenametemp);
 				return null;
 			}
 		}
@@ -82,7 +82,7 @@ public class DataInputStream
 		}
 		if (j == 500)
 		{
-			Res.err("TOO LONG FOR CREATE INPUTSTREAM " + filename);
+			Debug.LogError("TOO LONG FOR CREATE INPUTSTREAM " + filename);
 			status = 0;
 			return null;
 		}

@@ -3590,7 +3590,7 @@ public class GameScr : mScreen, IChatable
         return false;
     }
 
-    public void doDoubleClickToObj(IMapObject obj)
+    private void doDoubleClickToObj(IMapObject obj)
     {
         if (obj.Equals(Char.myCharz().mobFocus) && PickMob.tanSat && PickMob.TypeMobsTanSat.Count != 0 && !PickMob.TypeMobsTanSat.Contains(((Mob)obj).templateId))
         {
@@ -7352,15 +7352,14 @@ public class GameScr : mScreen, IChatable
             isFireWorks = true;
         }
         vChatVip.addElement(chatVip);
-        /*if (chatVip.Trim().ToLower().Contains("boss") && chatVip.Trim().ToLower().Contains("xuất hiện"))
+        if (chatVip.Trim().ToLower().Contains("boss") && chatVip.Trim().ToLower().Contains("xuất hiện"))
         {
             ModFunc.bossNotif.addElement(new ShowBoss(chatVip));
             if (ModFunc.bossNotif.size() > 5)
             {
                 ModFunc.bossNotif.removeElementAt(0);
             }
-        }*/
-        ListBoss.AddBoss(chatVip);
+        }
     }
 
     public void clearChatVip()

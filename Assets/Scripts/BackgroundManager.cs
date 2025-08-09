@@ -15,7 +15,7 @@ public class BackgroundManager : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            Res.err("Lỗi khi khởi tạo video: " + e.Message);
+            Debug.LogError("Lỗi khi khởi tạo video: " + e.Message);
         }
     }
 
@@ -30,7 +30,7 @@ public class BackgroundManager : MonoBehaviour
             }
             else
             {
-                Res.err("GameCanvas.g is null, check initialization!");
+                Debug.LogError("GameCanvas.g is null, check initialization!");
             }
         }
     }

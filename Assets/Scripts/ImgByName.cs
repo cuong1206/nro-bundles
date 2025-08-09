@@ -81,7 +81,7 @@ public class ImgByName
 		}
 		catch (Exception ex)
 		{
-			Res.err(i + ">>Errr save rms: " + text + "  " + ex.ToString());
+			Debug.LogError(i + ">>Errr save rms: " + text + "  " + ex.ToString());
 		}
 	}
 

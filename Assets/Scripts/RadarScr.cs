@@ -335,7 +335,7 @@ public class RadarScr : mScreen
         }
         catch (Exception ex)
         {
-            Res.err("-upd-radaScr-null: " + ex.ToString());
+            Debug.LogError("-upd-radaScr-null: " + ex.ToString());
         }
     }
 
@@ -722,7 +722,7 @@ public class RadarScr : mScreen
         }
         catch (Exception ex)
         {
-            Res.err("-pnt-radaScr-null: " + ex.ToString());
+            Debug.LogError("-pnt-radaScr-null: " + ex.ToString());
         }
     }
 

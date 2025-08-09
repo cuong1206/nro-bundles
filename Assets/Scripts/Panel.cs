@@ -913,12 +913,12 @@ public class Panel : IActionListener, IChatable
                                 eff = effdo;
                                 break;
                         }
-                        //Res.err(eff != null ? "non null" : "null");
+                        //Debug.LogError(eff != null ? "non null" : "null");
                             /*if (eff != null)
                                 g.drawImage(eff[GameCanvas.gameTick / 4 % 7], x + 2, y + 2);
                             if (bg != null)
                                 g.drawImage(bg[GameCanvas.gameTick / 4 % 7], x - 1, y - 1);*/
-                        //Res.err(x + " " + y);
+                        //Debug.LogError(x + " " + y);
                     }
                     //if (option != null && option.optionTemplate.id == 225)
                     //{
@@ -966,12 +966,12 @@ public class Panel : IActionListener, IChatable
                     //            eff = effcam;
                     //            break;
                     //    }
-                    //    //Res.err(eff != null ? "non null" : "null");
+                    //    //Debug.LogError(eff != null ? "non null" : "null");
                     //    if (eff != null)
                     //        g.drawImage(eff[GameCanvas.gameTick / 4 % 7], x + 2, y + 2);
                     //    if (bg != null)
                     //        g.drawImage(bg[GameCanvas.gameTick / 4 % 7], x - 1, y - 1);
-                    //    //Res.err(x + " " + y);
+                    //    //Debug.LogError(x + " " + y);
                     //}
                 }
             }
@@ -9869,7 +9869,6 @@ public class Panel : IActionListener, IChatable
                     }
                     else
                     {
-                        
                         ModFunc.GI().userOpenZones = true;
                         Service.gI().openUIZone();
                     }

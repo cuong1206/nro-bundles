@@ -18,15 +18,15 @@ public class ChatTextField : IActionListener
 
     public Command center;
 
-    public int x;
+    private int x;
 
-    public int y;
+    private int y;
 
-    public int w;
+    private int w;
 
-    public int h;
+    private int h;
 
-    public bool isPublic;
+    private bool isPublic;
 
     public Command cmdChat2;
 

@@ -1970,7 +1970,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
 
@@ -2080,7 +2080,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintPopupInfoMember(mGraphics g, Member m, int x, int y, int w, int h)
@@ -2286,7 +2286,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintPopupInfoClan(mGraphics g, Clan clan, int x, int y, int w, int h)
@@ -2414,7 +2414,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintPopupInfoSkill(mGraphics g, String text, int x, int y, int w, int h)
@@ -2555,7 +2555,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
 
@@ -3007,7 +3007,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintSnow(mGraphics g)
@@ -3113,7 +3113,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintMemberClan(mGraphics g, int x, int y, int w, int h)
@@ -3213,7 +3213,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintMemberClan(mGraphics g, Clan clan, int x, int y, int w, int h)
@@ -3313,7 +3313,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void paintClans(mGraphics g, int x, int y, int w, int h)
@@ -3426,7 +3426,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         private void paintEffectItem(mGraphics g, Item item, int x, int y)
@@ -3479,12 +3479,12 @@ namespace C_U_O_N_G
                                     eff = Panel.effdo;
                                     break;
                             }
-                            //Res.err(eff != null ? "non null" : "null");
+                            //Debug.LogError(eff != null ? "non null" : "null");
                             /*if (eff != null)
                                 g.drawImage(eff[GameCanvas.gameTick / 4 % 7], x + 2, y + 2);
                             if (bg != null)
                                 g.drawImage(bg[GameCanvas.gameTick / 4 % 7], x - 1, y - 1);*/
-                            //Res.err(x + " " + y);
+                            //Debug.LogError(x + " " + y);
                         }
                         //if (option != null && option.optionTemplate.id == 225)
                         //{
@@ -3532,12 +3532,12 @@ namespace C_U_O_N_G
                         //            eff = effcam;
                         //            break;
                         //    }
-                        //    //Res.err(eff != null ? "non null" : "null");
+                        //    //Debug.LogError(eff != null ? "non null" : "null");
                         //    if (eff != null)
                         //        g.drawImage(eff[GameCanvas.gameTick / 4 % 7], x + 2, y + 2);
                         //    if (bg != null)
                         //        g.drawImage(bg[GameCanvas.gameTick / 4 % 7], x - 1, y - 1);
-                        //    //Res.err(x + " " + y);
+                        //    //Debug.LogError(x + " " + y);
                         //}
                     }
                 }
@@ -3575,7 +3575,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         public void simplebutton(mGraphics g, String text, int x, int y, int w, int h, int rgbin, int rgbout, int action)
@@ -3668,7 +3668,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
         private void autoskillspecial()
@@ -3869,7 +3869,7 @@ namespace C_U_O_N_G
             }
             catch (Exception e)
             {
-                Res.err(e.ToString());
+                Debug.LogError(e.ToString());
             }
         }
 

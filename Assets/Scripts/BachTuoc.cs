@@ -160,7 +160,7 @@ public class BachTuoc : Mob, IMapObject
             }
             catch (System.Exception ex)
             {
-                Res.err($"❌ Lỗi đọc effect {id}: {ex.Message}");
+                Debug.LogError($"❌ Lỗi đọc effect {id}: {ex.Message}");
                 Service.gI().requestModTemplate(templateId);
             }
         }

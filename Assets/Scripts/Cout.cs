@@ -25,7 +25,7 @@ public class Cout
 	{
 		if (mSystem.isTest)
 		{
-			Res.err(str);
+			Debug.LogError(str);
 		}
 	}
 
@@ -40,7 +40,7 @@ public class Cout
 	{
 		if (mSystem.isTest)
 		{
-			Res.err(str);
+			Debug.LogError(str);
 		}
 	}
 

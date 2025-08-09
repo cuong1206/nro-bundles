@@ -33,7 +33,7 @@ public class MyStream
         }
         catch (System.Exception ex)
         {
-            Res.err("❌ Lỗi load từ AssetBundle: " + ex.Message);
+            Debug.LogError("❌ Lỗi load từ AssetBundle: " + ex.Message);
         }
 
         // Có thể fallback về dạng load cũ nếu cần (tuỳ bạn muốn giữ không)

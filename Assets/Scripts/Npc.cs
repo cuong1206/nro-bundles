@@ -30,7 +30,7 @@ public class Npc : Char
 
     private int duaHauIndex;
 
-    public int dyEff;
+    private int dyEff;
 
     public static bool mabuEff;
 

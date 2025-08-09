@@ -63,8 +63,6 @@ public class GameCanvas : IActionListener
 
     public static bool isConnectFail;
 
-    public static bool isPointerSelect;
-
     public static GameCanvas instance;
 
     public static bool bRun;
@@ -315,7 +313,7 @@ public class GameCanvas : IActionListener
 
     public static bool isLoadBGok;
 
-    public static long lastTimePress = 0L;
+    private static long lastTimePress = 0L;
 
     public static int keyAsciiPress;
 
@@ -874,7 +872,6 @@ public class GameCanvas : IActionListener
                     thongBaoTest = null;
                 }
             }
-            isPointerSelect = false;
         }
         catch (Exception)
         {
@@ -1072,7 +1069,7 @@ public class GameCanvas : IActionListener
         }
         catch
         {
-            Res.err("❌ Không thể phân tích link Google Drive.");
+            Debug.LogError("❌ Không thể phân tích link Google Drive.");
             return null;
         }
     }
@@ -2491,7 +2488,6 @@ public class GameCanvas : IActionListener
 
     public void pointerDragged(int x, int y)
     {
-        isPointerSelect = false;
         if (Res.abs(x - pxLast) >= 10 || Res.abs(y - pyLast) >= 10)
         {
             isPointerClick = false;
@@ -2519,7 +2515,6 @@ public class GameCanvas : IActionListener
 
     public void pointerPressed(int x, int y)
     {
-        isPointerSelect = false;
         isPointerJustRelease = false;
         isPointerJustDown = true;
         isPointerDown = true;
@@ -2536,8 +2531,6 @@ public class GameCanvas : IActionListener
 
     public void pointerReleased(int x, int y)
     {
-        if (!isPointerMove)
-            isPointerSelect = true;
         isPointerDown = false;
         isPointerJustRelease = true;
         isPointerMove = false;
@@ -2567,14 +2560,7 @@ public class GameCanvas : IActionListener
         }
         return false;
     }
-    public static bool isPointSelect(int x, int y, int w, int h)
-    {
-        if (!isPointerSelect)
-            return false;
-        if (px >= x && px <= x + w && py >= y && py <= y + h)
-            return true;
-        return false;
-    }
+
     public static void clearKeyPressed()
     {
         for (int i = 0; i < keyPressed.Length; i++)
@@ -3515,7 +3501,6 @@ public class GameCanvas : IActionListener
         isPointerClick = false;
         isPointerDown = false;
         isPointerJustDown = false;
-        isPointerSelect = false;
         isPointerJustRelease = false;
         GameScr.gI().lastSingleClick = 0L;
         GameScr.gI().isPointerDowning = false;

@@ -45,20 +45,7 @@ public class Image
     {
         return __createEmptyImage();
     }
-    public static Image createImageRGBA32(int w, int h)
-    {
-        return __createImageRGBA32(w, h);
-    }
-    public static Image __createImageRGBA32(int w, int h)
-    {
-        Image image = new Image();
-        image.texture = new Texture2D(w, h, TextureFormat.RGBA4444, mipChain: false);
-        setTextureQuality(image);
-        image.w = w;
-        image.h = h;
-        image.texture.Apply();
-        return image;
-    }
+
     public static Image createImage(string filename)
     {
         return __createImage2(filename);
@@ -403,7 +390,7 @@ public class Image
             throw new Exception("NULL POINTER EXCEPTION AT Image __createImage " + filename);
         }
         sbyte[] array = ArrayCast.cast(textAsset.bytes);
-        Res.err("CHIEU DAI MANG BYTE IMAGE CREAT = " + array.Length);
+        Debug.LogError("CHIEU DAI MANG BYTE IMAGE CREAT = " + array.Length);
         return textAsset.bytes;
     }
 

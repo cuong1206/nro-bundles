@@ -28,7 +28,7 @@ public class IntroVideoLoader : MonoBehaviour
 
         if (IsVideoReady)
         {
-            Res.outz("✅ Da co san video intro tại: " + videoPath);
+            Debug.Log("✅ Da co san video intro tại: " + videoPath);
             onComplete?.Invoke();
             yield break;
         }
@@ -37,10 +37,10 @@ public class IntroVideoLoader : MonoBehaviour
         if (!string.IsNullOrEmpty(directoryPath) && !Directory.Exists(directoryPath))
         {
             Directory.CreateDirectory(directoryPath);
-            Res.outz("📂 Da tao thu muc: " + directoryPath);
+            Debug.Log("📂 Da tao thu muc: " + directoryPath);
         }
 
-        Res.outz("📥 Bat dau tai video intro tu GitHub...");
+        Debug.Log("📥 Bat dau tai video intro tu GitHub...");
 
         UnityWebRequest uwr = UnityWebRequest.Get(DownloadUrl);
         uwr.downloadHandler = new DownloadHandlerFile(videoPath);
@@ -48,15 +48,15 @@ public class IntroVideoLoader : MonoBehaviour
 
         if (uwr.result == UnityWebRequest.Result.Success)
         {
-            Res.outz("✅ Tai video intro thanh cong tại: " + videoPath);
+            Debug.Log("✅ Tai video intro thanh cong tại: " + videoPath);
             onComplete?.Invoke();
         }
         else
         {
-            Res.err("❌ Loi tai video intro: " + uwr.error);
+            Debug.LogError("❌ Loi tai video intro: " + uwr.error);
             if (File.Exists(videoPath))
             {
-                Res.outz("File tai that bai, xoa file hong: " + videoPath);
+                Debug.LogWarning("File tai that bai, xoa file hong: " + videoPath);
                 File.Delete(videoPath); // Xóa file hỏng nếu có
             }
         }

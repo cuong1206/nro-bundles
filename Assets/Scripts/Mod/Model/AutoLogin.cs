@@ -15,7 +15,7 @@ public class AutoLogin
         lastTimeWait = mSystem.currentTimeMillis();
     }
 
-    /*public Account GetAccWithUsername(List<Account> accounts)
+    public Account GetAccWithUsername(List<Account> accounts)
     {
         foreach (Account acc in accounts)
         {
@@ -26,5 +26,5 @@ public class AutoLogin
         }
 
         return new Account("", "");
-    }*/
+    }
 }

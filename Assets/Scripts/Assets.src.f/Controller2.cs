@@ -824,7 +824,7 @@ namespace Assets.src.f
 					case 93:
 						{
 							string str = msg.reader().readUTF();
-						//	str += " " + ServerListScreen.linkweb;
+							str += " " + ServerListScreen.linkweb;
                             str = Res.changeString(str);
 							GameScr.gI().chatVip(str);
 							break;
