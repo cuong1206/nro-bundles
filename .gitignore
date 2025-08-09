@@ -1,0 +1,32 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]uutru/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]serSettings/
+[Aa]rtifacts/
+Assets/AssetStoreTools*
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Addressables & Cache nặng, có thể tạo lại
+*.unitypackage
+*.apk
+*.aab
+
+# Rider / JetBrains
+*.sln.dotSettings
+
+# Auto-generated
+*/.vsconfig
